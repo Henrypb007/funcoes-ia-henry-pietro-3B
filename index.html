@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engenharia Automotiva - IA & Pesquisa Directa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Fundo 3D Flutuante -->
+  <div class="bg-3d-container">
+      <div class="shape3d sphere1"></div>
+      <div class="shape3d sphere2"></div>
+      <div class="shape3d cube"></div>
+  </div>
+
+  <!-- Modal Principal -->
+  <main class="caixa-principal modal-3d">
+    <header class="modal-header">
+        <i class="fa-solid fa-car-side logo-icon"></i>
+        <h1>Engenharia Automotiva</h1>
+        <p class="subtitulo">Pergunte qualquer tema e receba a resposta completa na tela</p>
+    </header>
+
+    <!-- Campo de Digitação -->
+    <div class="caixa-input">
+        <label for="input-pergunta">Digite sua pergunta:</label>
+        <div class="input-grupo">
+            <input type="text" id="input-pergunta" placeholder="Ex: Como funciona a frenagem regenerativa ou o turbo?" autocomplete="off">
+            <button id="btn-perguntar" class="btn-3d btn-enviar">
+                <i class="fa-solid fa-magnifying-glass"></i> Responder
+            </button>
+        </div>
+    </div>
+
+    <!-- Seletor de Voz da I.A -->
+    <div class="caixa-voz">
+        <label for="seletor-vozes"><i class="fa-solid fa-microphone-lines"></i> Voz da I.A (Português Brasil):</label>
+        <select id="seletor-vozes" class="input-select">
+            <option value="">Carregando vozes do sistema...</option>
+        </select>
+    </div>
+
+    <!-- Indicador de Carregamento -->
+    <div id="status-busca" class="status-busca esconder">
+        <i class="fa-solid fa-circle-notch fa-spin"></i> Gerando resposta completa...
+    </div>
+
+    <!-- Resultado / Resposta Exibida na Tela -->
+    <div class="caixa-resultado esconder">
+        <h2><i class="fa-solid fa-brain"></i> Resposta Gerada</h2>
+        <p class="texto-resultado"></p>
+        
+        <div class="acoes-resultado">
+            <button id="btn-ouvir" class="btn-3d btn-voz">
+                <i class="fa-solid fa-volume-high"></i> Ouvir Resposta (Voz I.A)
+            </button>
+            <button id="btn-nova-pergunta" class="btn-3d btn-reiniciar">
+                <i class="fa-solid fa-rotate-right"></i> Fazer Outra Pergunta
+            </button>
+        </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
